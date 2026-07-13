@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>echopa | Engineering Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
+            --primary-color: #0066cc;
+            --secondary-color: #6c757d;
+            --card-bg: #ffffff;
+            --border-color: #e9ecef;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+                --primary-color: #4da6ff;
+                --secondary-color: #a0a0a0;
+                --card-bg: #1e1e1e;
+                --border-color: #2d2d2d;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: 500;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-card, .exp-item, .contact-form {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-title, .exp-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tech {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Form styling */
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: transparent;
+            color: inherit;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: -1px;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>echopa</h1>
+        <p class="subtitle">Engineering Specialist | [Your Domain - Mechanical/Software/Electrical]</p>
+        <div class="links">
+            <a href="mailto:echopajunior@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="#">Resume (PDF)</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a brief, punchy summary of who you are as an engineer. Focus on the problems you like to solve, your core expertise, and what drives you. Keep it to 3–4 sentences to ensure recruiters actually read it.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Python / C++</div>
+                <div class="skill-tag">CAD Modeling</div>
+                <div class="skill-tag">Systems Design</div>
+                <div class="skill-tag">Data Analysis</div>
+                <div class="skill-tag">Project Mgmt</div>
+                <div class="skill-tag">Problem Solving</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-title">Project Name One</div>
+                <p>A brief explanation of the problem you solved, your specific approach, and the measurable results (e.g., "reduced latency by 20%" or "optimized weight by 15%").</p>
+                <div class="project-tech">Technologies: Tool1, Tool2, Tool3</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Project Name Two</div>
+                <p>Describe another impressive project here. Focus on your individual contribution if it was a team effort.</p>
+                <div class="project-tech">Technologies: Tool1, Tool2, Tool3</div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="exp-item">
+                <div class="exp-title">Role Title — Company Name</div>
+                <div class="timeline-date">2024 — Present</div>
+                <p>Lead design and deployment of core projects. Managed a cross-functional team or engineered high-impact workflows ahead of schedule.</p>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-title">Engineering Intern / Associate — Company Name</div>
+                <div class="timeline-date">2023 — 2024</div>
+                <p>Developed automated processes that optimized performance. Assisted in documentation, testing, and prototyping phases.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="https://formsubmit.co/echopajunior@gmail.com" method="POST">
+                
+                <!-- Anti-Spam Honeypot -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <!-- Disables standard FormSubmit recaptcha screen -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 echopa. Built with clean HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
